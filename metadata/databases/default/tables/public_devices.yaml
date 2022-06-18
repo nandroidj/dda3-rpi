@@ -1,0 +1,18 @@
+table:
+  schema: public
+  name: devices
+array_relationships:
+  - name: commands
+    using:
+      foreign_key_constraint_on:
+        column: device_id
+        table:
+          schema: public
+          name: commands
+  - name: telemetries
+    using:
+      foreign_key_constraint_on:
+        column: device_id
+        table:
+          schema: public
+          name: telemetries

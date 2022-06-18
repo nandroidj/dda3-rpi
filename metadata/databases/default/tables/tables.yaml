@@ -1,1 +1,3 @@
-[]
+- "!include public_commands.yaml"
+- "!include public_devices.yaml"
+- "!include public_telemetries.yaml"

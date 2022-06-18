@@ -43,12 +43,18 @@ services:
       # SERVER_GRAPHQL_ENPOINT: http://${HOSTIP}:8083/backend
 
 
+  mosquitto:
+      # service header
+      image:                  eclipse-mosquitto:latest
+      hostname:               mosquitto
+      container_name:         mosquitto
+      
+      ports:
+      # - 127.0.0.1:1883:1883
+        - 127.0.0.1:8883:8883
 
-
-
-
-
-
-
+      volumes:                                                                    
+        - ./broker/mosquitto.conf:/mosquitto/config/mosquitto.conf                
+      #  - ./broker/data:/mosquitto/data
 
 
